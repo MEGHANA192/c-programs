@@ -1,0 +1,300 @@
+Calculate simple and compound interest for various parameters specified by the user
+
+#include <stdio.h>
+#include<math.h>
+int main() 
+{
+    float P,T,R,S,C;
+    printf("Enter the principal amount");
+    scanf("%f",&P);
+    printf("Enter the time");
+    scanf("%f",&T);
+    printf("Enter the rate of interest");
+    scanf("%f",&R);
+    S=(P*T*R)/100;
+    printf("The simple interest is %f",S);
+    C=P*(pow(1+R/100,T)-1);
+    printf("The compound interest is %f",C);
+    return 0;
+}
+
+
+
+ To enter marks of five subjects and calculate total, average and percentage.
+
+#include <stdio.h>
+
+int main()
+{
+    int maths,physics,chemistry,english,social,total,average,percentage;
+    printf("enter the marks of maths");
+    scanf("%d",&maths);
+    printf("enter the marks of physics");
+    scanf("%d",&physics);
+    printf("enter the marks of chemistry");
+    scanf("%d",&chemistry);
+    printf("enter the marks of english");
+    scanf("%d",&english);
+    printf("enter the marks of social");
+    scanf("%d",&social);
+    total=maths+physics+chemistry+english+social;
+    printf("total=%d",total);
+    average=((maths+physics+chemistry+english+social)/5);
+    printf("average=%d",average);
+    percentage=(total*100)/500;
+    printf("percentage=%d",percentage);
+
+    return 0;
+}
+
+
+
+Convert an upper-case character to a lower-case character.
+
+#include<stdio.h>
+ #include<conio.h>
+  int main()
+{
+    char upperChar, lowerChar;
+    int ascii;
+    printf("Enter an uppercase Character: ");
+    scanf("%c", &upperChar);
+    ascii = upperChar;
+    lowerChar = ascii+32;
+    printf("\nIts Lowercase = %c", lowerChar);
+    getch();
+    return 0;
+}
+
+
+ Enter two angles of a triangle and find the third angle.
+
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    printf("enter the value of a");
+    scanf("%d",&a);
+    printf("enter the value of b");
+    scanf("%d",&b);
+    c=(180-(a+b));
+    printf("c=%d",c);
+    
+    return 0;
+}
+
+
+
+Calculate net salary of employee given basic,da,hra,pf and lic
+
+#include <stdio.h>
+
+
+int main()
+{
+    
+    float basic, da, hra, ta, others;
+    float pf,it;
+    float net_salary;
+    
+    
+    printf("Enter Basic Salary ($): ");
+    scanf("%f",&basic);
+    printf("Enter HRA ($): ");
+    scanf("%f",&hra);
+    printf("Enter TA ($): ");
+    scanf("%f",&ta);    
+    printf("Enter others ($): ");
+    scanf("%f",&others);    
+    
+    
+    da = (basic*12)/100;
+    
+    pf = (basic*14)/100;
+    //calculate IT, 15% of Basic salary
+    it = (basic*15)/100;
+    
+    
+    net_salary = basic + da + hra + ta + others - (pf+it);
+    
+    
+    printf("Net Salary is: $ %.02f\n",net_salary);
+    
+    return 0;
+}
+
+
+
+To Convert time 
+
+#include<stdio.h>
+
+
+int main()
+{
+     int seconds, hours, minutes, s;
+     
+     printf("Enter time in seconds: ");
+     scanf("%d", &seconds);
+     hours = seconds/3600;
+     minutes = (seconds - hours*3600)/60;
+     s = seconds - hours*3600 - minutes*60;
+     printf("%d seconds = %d hours : %d minutes : %d seconds", s, hours, minutes, seconds);
+
+     return(0);
+}
+
+
+
+
+Convert Distance from km to m,f,i,cm
+
+#include <stdio.h>
+ 
+int main() 
+{
+int distance;
+float m, f, i, cm;
+ 
+printf("Enter the distance [in Km]: ");
+scanf("%d", & distance);
+ 
+m = distance * 1000;
+f = distance * 3280.84;
+i = distance * 39370.1;
+cm = distance * 100000;
+ 
+printf("m = %f\n", m);
+printf("F = %f\n", f);
+printf("I = %f\n", i);
+printf("Cm = %f\n", cm);
+ 
+return 0;
+}
+
+
+
+convert area
+
+#include <stdio.h>
+
+int main()
+{
+    float h,b,area;
+    printf("enter height");
+    scanf("%float",&h);
+    printf("enter base");
+    scanf("%float",&b);
+    area= (b*h)/2;
+   printf("Area of the triangle = %.2f sq. units", area);
+    return 0;
+}
+
+
+convert volume
+
+
+
+#include<stdio.h>
+int main()
+{
+    
+    int s,a;
+    printf("enter side of cube: ");
+    scanf("%d",&s);
+    
+   
+    a=s*s*s;
+    printf("Volume Of cube: %d\n",a);
+    return 0;
+}
+
+convert celsius to farenheit 
+
+int main() 
+{
+    float C,F;
+    printf("Enter the value in Celsius");
+    scanf("%f",&C);
+    F=(C*9/5)+32;
+    printf("The value in fahrenheit %f",F);
+    return 0;
+}
+
+
+
+retrieve remainder after division of two numbers without using mod operator
+
+#include <stdio.h>
+
+int main()
+{
+   int n,d,r;
+
+
+    printf("Enter the number : ");
+    scanf("%d",&n);
+
+  
+    printf("Enter the divisor : ");
+    scanf("%d",&d);
+
+    
+    while(n >= d){
+        n = n - d;
+    }
+
+    
+    r = n;
+
+    
+    printf("The remainder is %d ",r);
+
+    return 0;
+}
+
+
+Least Significant Bit
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    
+    if(n & 1)
+        printf("Least Significant Bit of %d is set (1).", n);
+    else
+        printf("Least Significant Bit of %d is unset (0).", n);
+
+    return 0;
+}
+
+
+Input any number from user and check whether nth bit of the given number is set (1) or not (0)(hint: Use bitwise operators)
+
+#include <stdio.h>
+
+int main()
+{
+    int num, n, bitStatus;
+
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    
+    printf("Enter nth bit to check (0-31): ");
+    scanf("%d", &n);
+
+    
+    bitStatus = (num >> n) & 1;
+
+    printf("The %d bit is set to %d", n, bitStatus);
+
+    return 0;
+}
